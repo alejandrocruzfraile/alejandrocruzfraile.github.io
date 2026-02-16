@@ -268,30 +268,48 @@
   <nav>
     <h1>Alejandro Cruz</h1>
     <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#perfil">Perfil</a></li>
-      <li><a href="indexProjects.html">Proyectos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#perfil">Perfil</a></li>
+        <li><a href="indexProjects.html#proyectos">Proyectos</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
     </ul>
   </nav>
 
-  <!-- INICIO -->
-  <section id="inicio" class="hero">
-    <img src="assets/images/FotoPerfil.webp" alt="Mi foto">
-    <h2>Hola, soy Alejandro Cruz</h2>
-    <p>Modelador / Animador 3D / Rigger</p>
-    <a href="indexProjects.html" class="btn">Ver proyectos</a>
-  </section>
 
-  <!-- PERFIL -->
-  <section id="perfil">
-    <div class="perfil">
-      <h2>Sobre m&iacute;</h2>
-      <p>
-        Animador, rigger y modelador 3D con las habilidades necesarias para realizar cualquier tipo de trabajo relacionado con la creaci&oacute;n art&iacute;stica digital.
-      </p>
+  <!-- PROYECTOS -->
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <h2 style="text-align:center;">Mis proyectos</h2>
+  <div class="proyectos">
+    
+    <!-- LOWPOLY SLIDER -->
+    <div class="card">
+      <div class="slider">
+        <img src="assets/images/projects/LowPoly.webp" class="slide active" alt="LowPoly">
+        <img src="assets/images/projects/LowPoly_1.webp" class="slide" alt="LowPoly_1">
+        <img src="assets/images/projects/LowPoly_2.webp" class="slide" alt="LowPoly_2">
+      </div>
+      <h3>Entorno LowPoly</h3>
+      <p>Entorno 3D hecho en Maya con estilo diorama de temática japonesa.</p>
     </div>
-  </section>
+
+    <div class="card">
+      <div class="slider">
+        <img src="assets/images/projects/Edificio.webp" class="slide active" alt="Edificio">
+        <img src="assets/images/projects/Edificio_1.webp" class="slide" alt="Edificio_1">
+        <img src="assets/images/projects/Edificio_2.webp" class="slide" alt="Edificio_2">
+      </div>
+        <h3>Ciudad del salvaje oeste</h3>
+        <p>Entorno creado utilizando edificios con componentes creados proceduralmente.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/projects/personaje.webp" alt="personaje">
+      <h3>Personaje original "bonemask"</h3>
+      <p>Personaje original creado para el proyecto de videojuego "bone path".</p>
+    </div>
+  </div>
+</section>
 
 <!-- SCRIPT PARA EL SLIDER -->
 <script>
@@ -304,19 +322,6 @@
     slides[current].classList.add('active');     // Activa la nueva imagen
   }, 3000); // Cambia cada 3 segundos
 </script>
-
-  <!-- CONTACTO -->
-  <section id="contacto">
-    <div class="contacto">
-      <h2>Contacto</h2>
-      <form>
-        <input type="text" placeholder="Tu nombre" required>
-        <input type="email" placeholder="Tu email" required>
-        <textarea rows="4" placeholder="Tu mensaje"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  </section>
 
   <!-- FOOTER -->
   <footer>
