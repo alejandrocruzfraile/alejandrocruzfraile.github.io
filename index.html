@@ -190,6 +190,27 @@
         font-size: 3rem;
       }
     }
+    .slider {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
   </style>
 </head>
 
@@ -225,28 +246,47 @@
   </section>
 
   <!-- PROYECTOS -->
-  <section id="proyectos">
-    <h2 style="text-align:center;">Mis proyectos</h2>
-    <div class="proyectos">
-      <div class="card">
-        <img src="assets/images/projects/LowPoly.webp" alt="LowPoly">
-        <h3>Entorno LowPoly</h3>
-        <p>Entorno 3D hecho en Maya con estilo diorama de temática japonesa.</p>
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <h2 style="text-align:center;">Mis proyectos</h2>
+  <div class="proyectos">
+    
+    <!-- LOWPOLY SLIDER -->
+    <div class="card">
+      <div class="slider">
+        <img src="assets/images/projects/LowPoly.webp" class="slide active" alt="LowPoly">
+        <img src="assets/images/projects/LowPoly_1.webp" class="slide" alt="LowPoly_1">
+        <img src="assets/images/projects/LowPoly_2.webp" class="slide" alt="LowPoly_2">
       </div>
-
-      <div class="card">
-        <img src="https://picsum.photos/400/250?2" alt="">
-        <h3>Ciudad del salvaje oeste</h3>
-        <p>Entorno creado utilizando edificios con componentes creados proceduralmente.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://picsum.photos/400/250?3" alt="">
-        <h3>Alienigena Buzo</h3>
-        <p>Personaje original creado por mí.</p>
-      </div>
+      <h3>Entorno LowPoly</h3>
+      <p>Entorno 3D hecho en Maya con estilo diorama de temática japonesa.</p>
     </div>
-  </section>
+
+    <div class="card">
+      <img src="https://picsum.photos/400/250?2" alt="">
+      <h3>Ciudad del salvaje oeste</h3>
+      <p>Entorno creado utilizando edificios con componentes creados proceduralmente.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/400/250?3" alt="">
+      <h3>Alienigena Buzo</h3>
+      <p>Personaje original creado por mí.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPT PARA EL SLIDER -->
+<script>
+  const slides = document.querySelectorAll('.slider .slide');
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove('active');   // Quita la imagen actual
+    current = (current + 1) % slides.length;     // Pasa a la siguiente imagen
+    slides[current].classList.add('active');     // Activa la nueva imagen
+  }, 3000); // Cambia cada 3 segundos
+</script>
 
   <!-- CONTACTO -->
   <section id="contacto">
@@ -265,6 +305,15 @@
   <footer>
     <p>&copy; 2026 &ndash; Mi Portfolio</p>
   </footer>
+  <script>
+  const slides = document.querySelectorAll('.slider .slide');
+  let current = 0;
 
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 3000); // cambia cada 3 segundos
+</script>
 </body>
 </html>
